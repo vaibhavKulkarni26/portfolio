@@ -1,3 +1,4 @@
+import MagicButton from './ui/MagicButton'
 import { Spotlight } from './ui/spotlight'
 import { TextGenerateEffect } from './ui/TextGenerateEffect'
 
@@ -20,10 +21,20 @@ const Hero = () => {
                 Dynamic Web Magic with Next.js
                 </h2>
                 <TextGenerateEffect
-                className=''
-                words='Transforming Concepts into Seamless'/>
+                className=' text-center text-[40px] md:itext-5xl lg:text-6xl '
+                words='Transforming Concepts into Seamless Experiences'/>
+                <p className='text-center md:tracking-wider md-4 text-sm md:text-lg lg:text-2xl'>
+                   Hi I'm Vaibhav , a Software Developer
+                </p>
+                <a href='#about'>
+                  <MagicButton
+                    // title = "Show my work"
+                  />
+
+                </a>
 
             </div>
+            
 
         </div>
     </div>
