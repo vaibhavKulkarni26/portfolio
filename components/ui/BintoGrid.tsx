@@ -35,7 +35,7 @@ export const BentoGrid = ({
 export const BentoGridItem = ({
   className,
   id,
-  title ="Show",
+  title ="",
   description,
   //   remove unecessary things here
   img,
