@@ -2,15 +2,30 @@ import { useState } from "react";
 import { IoCopyOutline } from "react-icons/io5";
 
 // Also install this npm i --save-dev @types/react-lottie
-import Lottie from "react-lottie";
+// import Lottie from "react-lottie";
 
 import { cn } from "@/lib/utils";
 
 
 import { BackgroundGradientAnimation } from "@/components/ui/GradientBG";
 import GridGlobe from "./GridGlobe";
-import animationData from "@/data/confetti.json";
+// import animationData from "@/data/confetti.json";
 import MagicButton from "@/components/ui/MagicButton";
+import dynamic from "next/dynamic";
+
+const Lottie = dynamic(() => import("react-lottie"), { ssr: false });
+
+import animationData from "@/data/confetti.json";
+
+export default function LottieAnimation() {
+  const options = {
+    loop: true,
+    autoplay: true,
+    animationData: animationData,
+  };
+
+  return <Lottie options={options} height={200} width={200} />;
+}
 
 export const BentoGrid = ({
   className,
